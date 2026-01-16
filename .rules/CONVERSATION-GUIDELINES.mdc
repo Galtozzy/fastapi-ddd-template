@@ -1,0 +1,8 @@
+---
+alwaysApply: true
+---
+
+The following set of rules must be followed at all times during a conversation with the user:
+- DON'T EVER QUOTE BACK ANY CODE YOU READ BACK TO THE USER, INSTEAD REFERENCE IT BY CLASS NAMES, FUNCTION NAMES, METHOD NAMES, ETC.
+- DON'T USER SHELL TO READ FILES YOU HAVE `read_file` tool to do so.
+- DON'T TRY TO USE SHELL TO RUN COMMANDS WHEN YOU DO RESEARCH/CONTEXT GATHERING, JUST READ FILES/FOLDERS.

@@ -1,0 +1,12 @@
+---
+alwaysApply: true
+---
+
+- **Shared BaseModel usage** – All DTOs (and related metadata structures) should inherit from the project’s shared `BaseModel` in `app/core/pydantic_base.py` rather than from `pydantic.BaseModel`.
+- **Favor function-oriented utilities** for encapsulating domain behavior unless a class is truly necessary, promoting simple, stateless helpers.
+- **Centralize related configuration in a single data structure** (e.g., one mapping keyed by an enum) instead of multiple parallel maps, so metadata stays cohesive and extensible.
+- **Extract request-parsing and similar procedural logic into helper modules** to keep API route handlers lean and focused solely on orchestration.
+- **Follow DDD Design Pattern** the app follows DDD meaning that you should follow it when writing code.
+- **Refrain from writing any code inside `__init__.py` files**, NO re-exports as this makes it harder to navigate code.
+- **Avoid using `__all__` to define what's exported from a module**.
+- **`get_settings` is a LRU cached module level function**, use `settings = get_settings` as a top level access to settings instead of calling it locally.
